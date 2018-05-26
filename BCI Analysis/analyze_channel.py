@@ -16,7 +16,7 @@ source = 'muse'#'openbci'
 path = 'data/'
 
 # EEG data file name
-filename = 'filtered_data1.csv'#'eegrunt-obci-ovibe-test-data.csv'
+filename = 'filtered_data2.csv'#'eegrunt-obci-ovibe-test-data.csv'
 
 # Session title (used in some plots and such)
 session_title = "EEGrunt OpenBCI Sample Data"
