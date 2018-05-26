@@ -10,13 +10,13 @@ import EEGrunt
 # 'openbci-openvibe' for Cyton data recorded with OpenViBE's csv writer
 # 'openbci-ganglion-openvibe' for Ganglion data recorded with OpenViBE's csv writer
 
-source = 'openbci'
+source = 'muse'#'openbci'
 
 # Path to EEG data file
-path = 'data\\'
+path = 'data/'
 
 # EEG data file name
-filename = 'eegrunt-obci-ovibe-test-data.csv'
+filename = 'filtered_data1.csv'#'eegrunt-obci-ovibe-test-data.csv'
 
 # Session title (used in some plots and such)
 session_title = "EEGrunt OpenBCI Sample Data"
