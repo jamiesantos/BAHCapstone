@@ -16,7 +16,7 @@ source = 'muse' #'openbci'
 path = 'C:/Users/nkala/Desktop/Final_Data/' #'data/'
 
 # EEG data file name
-filename = 'Nivii_360_filtered_data2.csv'#'eegrunt-obci-ovibe-test-data.csv'
+filename = 'Pinzhu_Calm_filtered_data2_1.csv'#'eegrunt-obci-ovibe-test-data.csv'
 
 # Session title (used in plots and such)
 session_title = "Muse Data"
