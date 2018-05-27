@@ -13,13 +13,13 @@ import EEGrunt
 source = 'muse' #'openbci'
 
 # Path to EEG data file
-path = 'data/'
+path = 'C:/Users/nkala/Desktop/Final_Data/' #'data/'
 
 # EEG data file name
-filename = 'Jamie_Cup1_updated.csv'#'eegrunt-obci-ovibe-test-data.csv'
+filename = 'Pinzhu_Calm_filtered_data2.csv'#'eegrunt-obci-ovibe-test-data.csv'
 
 # Session title (used in plots and such)
-session_title = "Muse Test Data"
+session_title = "Muse Data"
 
 # Initialize
 EEG = EEGrunt.EEGrunt(path, filename, source, session_title)
@@ -62,6 +62,7 @@ for channel in EEG.channels:
     # Line graph of amplitude over time for a given frequency range.
     # Arguments are start frequency, end frequency, and label
     EEG.plot_band_power(8,12,"Alpha")
+    EEG.plot_band_power(12,38,"Beta")
 
     # Power spectrum
     EEG.plot_spectrum_avg_fft()

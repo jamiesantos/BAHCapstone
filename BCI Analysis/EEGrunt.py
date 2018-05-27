@@ -48,8 +48,6 @@ class EEGrunt:
         self.hrv_window_length = 10
 
 
-
-
     def load_data(self):
 
         path = self.path
@@ -71,8 +69,8 @@ class EEGrunt:
             with open(path + filename, 'r') as csvfile:
                 for row in csvfile:
                     cols = row.split(',')
-                    if(cols[1].strip() == "/muse/eeg"):
-                        raw_data.append(cols[2:6])
+                    if(cols[2].strip() == "Person0/eeg"): #"/muse/eeg"
+                        raw_data.append(cols[3:7])
 
             dt = np.dtype('Float64')
             #print (raw_data)
@@ -104,7 +102,7 @@ class EEGrunt:
 
         self.raw_data = raw_data
 
-        self.t_sec = np.arange(len(self.raw_data[:, 0])) /self.fs_Hz
+        self.t_sec = np.arange(len(self.raw_data[:, 1])) /self.fs_Hz
 
         print ("Session length (seconds): "+str(len(self.t_sec)/self.fs_Hz))
         print ("t_sec last: "+str(self.t_sec[:-1]))

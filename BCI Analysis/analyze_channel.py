@@ -13,13 +13,13 @@ import EEGrunt
 source = 'muse'#'openbci'
 
 # Path to EEG data file
-path = 'data/'
+path = 'C:/Users/nkala/Desktop/Final_Data/' #'data/'
 
 # EEG data file name
-filename = 'filtered_data2.csv'#'eegrunt-obci-ovibe-test-data.csv'
+filename = 'Nivii_Calm_filtered_data2.csv'#'eegrunt-obci-ovibe-test-data.csv'
 
 # Session title (used in some plots and such)
-session_title = "EEGrunt OpenBCI Sample Data"
+session_title = "Muse Data"
 
 # Channel
 channel = 1
@@ -53,8 +53,8 @@ EEG.get_spectrum_data()
 
 # Returns bandpassed data
 # (uses scipy.signal butterworth filter)
-start_Hz = 1
-stop_Hz = 50
+start_Hz = 12 #1
+stop_Hz = 38 #50
 EEG.data = EEG.bandpass(start_Hz,stop_Hz)
 
 # Make Spectrogram
@@ -62,6 +62,7 @@ EEG.spectrogram()
 
 # Line graph of amplitude over time for a given frequency range.
 # Arguments are start frequency, end frequency, and label
+#EEG.plot_band_power(12, 28,"Beta")
 EEG.plot_band_power(8,12,"Alpha")
 
 # Power spectrum plot
