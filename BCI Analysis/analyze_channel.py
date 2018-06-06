@@ -1,4 +1,4 @@
-import EEGrunt
+import EEGFuncs
 
 # Required settings #
 
@@ -16,7 +16,7 @@ source = 'muse'#'openbci'
 path = 'C:/Users/nkala/Desktop/Final_Data/' #'data/'
 
 # EEG data file name
-filename = 'Nivii_Calm_filtered_data2.csv'#'eegrunt-obci-ovibe-test-data.csv'
+filename = 'Nivii_Calm_filtered_data2.csv'
 
 # Session title (used in some plots and such)
 session_title = "Muse Data"
@@ -25,7 +25,7 @@ session_title = "Muse Data"
 channel = 1
 
 # Initialize
-EEG = EEGrunt.EEGrunt(path, filename, source, session_title)
+EEG = EEGFuncs.EEGFuncs(path, filename, source, session_title)
 
 # Here we can set some additional properties
 # The 'plot' property determines whether plots are displayed or saved.
@@ -48,7 +48,7 @@ EEG.notch_mains_interference()
 # Make signal plot
 EEG.signalplot()
 
-# Calculates spectrum data and stores as EEGrunt attribute(s) for reuse
+# Calculates spectrum data and stores as EEGFuncs attribute(s) for reuse
 EEG.get_spectrum_data()
 
 # Returns bandpassed data

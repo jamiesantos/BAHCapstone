@@ -1,8 +1,8 @@
-import EEGrunt
+import EEGFuncs
 
 # Required settings
 
-# Data source. Options:
+# Data source. Current options:
 # 'muse' for data from Muse headsets.
 # 'muse-lsl' for data from Muse headsets recorded with Lab Streaming Layer.
 # 'openbci' for OpenBCI Cyton data recorded with the OpenBCI GUI;
@@ -16,13 +16,13 @@ source = 'muse' #'openbci'
 path = 'C:/Users/nkala/Desktop/Final_Data/' #'data/'
 
 # EEG data file name
-filename = 'Pinzhu_Calm_filtered_data2_1.csv'#'eegrunt-obci-ovibe-test-data.csv'
+filename = 'Pinzhu_Calm_filtered_data2_1.csv'
 
 # Session title (used in plots and such)
 session_title = "Muse Data"
 
 # Initialize
-EEG = EEGrunt.EEGrunt(path, filename, source, session_title)
+EEG = EEGFuncs.EEGFuncs(path, filename, source, session_title)
 
 # Here we can set some additional properties
 # The 'plot' property determines whether plots are displayed or saved.
